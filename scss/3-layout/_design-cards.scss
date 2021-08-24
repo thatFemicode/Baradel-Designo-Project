@@ -1,0 +1,163 @@
+#main {
+  .design-cards {
+    width: 100%;
+    height: 988px;
+    @include flex(flex, row wrap, space-between, center);
+    margin-top: 160px;
+    position: relative;
+
+    @include responsive {
+      width: 639px;
+      height: 2030px;
+      @include flex(flex, column nowrap, space-between, center);
+      margin-top: 120px;
+    }
+
+    @include mobile {
+      width: 327px;
+      height: 3068px;
+      @include flex(flex, column nowrap, space-between, center);
+      margin-top: 96px;
+    }
+
+    &.design-graphic-cards {
+      height: 478px;
+
+      @include responsive {
+        height: 1004px;
+      }
+
+      @include mobile {
+        height: 1514px;
+      }
+    }
+    &.design-app-cards {
+      @include responsive {
+        height: 1688px;
+      }
+      @include mobile {
+        height: 2550px;
+      }
+    }
+    .design-card {
+      width: 350px;
+      height: 478px;
+      @include flex(flex, column, flex-start, center);
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+
+      @include responsive {
+        width: 689px;
+        height: 310px;
+        @include flex(flex, row, flex-start, center);
+      }
+      @include mobile {
+        width: 327px;
+        height: 478px;
+        @include flex(flex, column, flex-start, center);
+      }
+
+      &.active {
+        transform: scale(1.02);
+        transition: 0.2s ease-in-out;
+      }
+
+      img {
+        width: 100%;
+        height: 320px;
+        pointer-events: none;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        @include responsive {
+          width: 339px;
+          height: 310px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: unset;
+          border-bottom-left-radius: 15px;
+        }
+        @include mobile {
+          width: 100%;
+          height: 320px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: unset;
+        }
+      }
+      &-desc {
+        width: 100%;
+        height: 158px;
+        @include flex(flex, column, space-between, center);
+        text-align: center;
+        padding: 32px;
+        background: rgba(253, 243, 240, 1);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: 0.2s ease-in-out;
+        pointer-events: none;
+
+        @include responsive {
+          width: 350px;
+          height: 100%;
+          padding: 109px 41px 108px 32px;
+          border-bottom-left-radius: unset;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+        }
+
+        @include mobile {
+          width: 100%;
+          height: 158px;
+          padding: 32px;
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          border-top-right-radius: unset;
+        }
+
+        &.active {
+          background: map-get($map: $color, $key: peach);
+          transition: 0.2s ease-in-out;
+
+          @include mobile {
+            background: map-get($map: $color, $key: peach);
+            transition: 0.2s ease-in-out;
+          }
+        }
+        h3 {
+          &.active {
+            color: #fff;
+            transition: 0.2s ease-in-out;
+
+            @include mobile {
+              color: #fff;
+              transition: 0.2s ease-in-out;
+            }
+          }
+        }
+        p {
+          font-weight: 400;
+
+          @include mobile {
+            font-weight: 400;
+          }
+          &.active {
+            color: #fff;
+            transition: 0.2s ease-in-out;
+
+            @include mobile {
+              color: #fff;
+              transition: 0.2s ease-in-out;
+            }
+          }
+        }
+      }
+      &.design-last-card {
+        margin-right: 381px;
+
+        @include responsive {
+          margin-right: unset;
+        }
+      }
+    }
+  }
+}

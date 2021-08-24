@@ -1,0 +1,291 @@
+#main {
+  .home-leaf {
+    &::after {
+      @include min {
+        content: '';
+        @include absolute-el(1732px, -164px, unset, unset);
+        width: 1006px;
+        height: 594px;
+        background: url(/dist/assets/shared/desktop/bg-pattern-leaf.svg);
+        z-index: -2;
+        transform: rotate(180deg);
+        overflow: hidden;
+      }
+    }
+    &.hero-leaf {
+      &::before {
+        @include min {
+          content: '';
+          @include absolute-el(323px, unset, unset, -164px);
+          width: 1006px;
+          height: 595px;
+          background: url(/dist/assets/shared/desktop/bg-pattern-leaf.svg);
+          z-index: -3;
+          // opacity: 3;
+        }
+      }
+    }
+
+    .hero-home {
+      width: 100%;
+      height: 640px;
+      @include flex(flex, row, center, center);
+      position: relative;
+      background-color: map-get($map: $color, $key: peach);
+      border-radius: 15px;
+      overflow: hidden;
+      z-index: 1;
+
+      @include responsive {
+        height: 843px;
+        @include flex(flex, column, center, center);
+      }
+      @include mobile {
+        height: 843px;
+        @include flex(flex, column, center, center);
+      }
+      &-text {
+        width: 50%;
+        height: 100%;
+        @include flex(flex, row, flex-end, center);
+
+        &-wrap {
+          height: 350px;
+          width: 475px;
+          @include flex(flex, column, space-between, flex-start);
+          position: relative;
+          z-index: 2;
+
+          @include responsive {
+            height: 326px;
+            width: 573px;
+            @include flex(flex, column, center, center);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-top: 60px;
+          }
+          @include mobile {
+            height: 312px;
+            width: 327px;
+            margin-top: 80px;
+          }
+          h1 {
+            @include mobile {
+              font-size: 2rem;
+            }
+          }
+          h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: 0px;
+
+            @include responsive {
+              width: 445px;
+              height: 78px;
+              margin-top: 8px;
+            }
+            @include mobile {
+              width: 100%;
+              height: 100px;
+              margin-top: 14px;
+            }
+          }
+          a {
+            @include responsive {
+              margin-top: 24px;
+            }
+            @include mobile {
+              margin-top: 24px;
+            }
+          }
+        }
+        @include responsive {
+          height: 100%;
+          width: 100%;
+          @include flex(flex, row, center, flex-start);
+        }
+        @include mobile {
+          width: 100%;
+          height: 50%;
+          @include flex(flex, row, center, flex-start);
+        }
+      }
+      &-image {
+        width: 50%;
+        height: 100%;
+
+        @include responsive {
+          width: 100%;
+          height: 50%;
+          @include flex(flex, row, center, center);
+        }
+        img {
+          @include absolute-el(-30px, unset, unset, unset);
+
+          @include responsive {
+            @include absolute-el(286px, unset, unset, unset);
+          }
+          @include mobile {
+            @include absolute-el(320px, unset, unset, unset);
+          }
+        }
+
+        &::before {
+          content: '';
+          // position: absolute;
+          // right: 0px;
+          @include absolute-el(unset, 0px, unset, unset);
+          width: 640px;
+          height: 640px;
+          background-image: url(/dist/assets/home/desktop/bg-pattern-hero-home.svg);
+
+          @include responsive {
+            content: '';
+            @include absolute-el(102px, -121px, unset, unset);
+            width: 640px;
+            height: 640px;
+            background-image: url(/dist/assets/home/desktop/bg-pattern-hero-home.svg);
+          }
+          @include mobile {
+            content: '';
+            @include absolute-el(107px, -266px, unset, unset);
+            width: 640px;
+            height: 640px;
+            background-image: url(/dist/assets/home/desktop/bg-pattern-hero-home.svg);
+          }
+        }
+      }
+    }
+
+    .home-features {
+      width: 100%;
+      height: 412px;
+      @include flex(flex, row, space-between, center);
+      margin-top: 160px;
+
+      @include responsive {
+        width: 690px;
+        height: 670px;
+        @include flex(flex, column, space-between, center);
+        margin-top: 120px;
+      }
+      @include mobile {
+        width: 327px;
+        height: 1396px;
+        @include flex(flex, column, space-between, center);
+      }
+      .home-feature {
+        width: 350px;
+        height: 412px;
+        @include flex(flex, column, flex-start, center);
+        position: relative;
+
+        @include responsive {
+          width: 100%;
+          height: 202px;
+          @include flex(flex, row, space-between, center);
+        }
+        @include mobile {
+          width: 100%;
+          height: 412px;
+          @include flex(flex, column, space-between, center);
+        }
+        &::before {
+          content: '';
+          width: 202px;
+          height: 202px;
+          z-index: 1;
+          @include absolute-el(0px, unset, unset, 74px);
+          opacity: 0.1;
+          border-radius: 50%;
+
+          @include responsive {
+            content: '';
+            width: 202px;
+            height: 202px;
+            z-index: 1;
+            @include absolute-el(0px, unset, unset, 0px);
+            opacity: 0.2;
+            border-radius: 50%;
+          }
+          @include mobile {
+            content: '';
+            width: 202px;
+            height: 202px;
+            z-index: 1;
+            @include absolute-el(0px, unset, unset, 74px);
+            opacity: 0.3;
+            border-radius: 50%;
+          }
+        }
+        &:first-child::before {
+          background: linear-gradient(
+            90deg,
+            rgba(93, 2, 2, 0.497569) 0%,
+            rgba(93, 2, 2, 0.0001) 100%
+          );
+        }
+        &:nth-child(2)::before {
+          background: linear-gradient(
+            180deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+        }
+        &:last-child::before {
+          background: linear-gradient(
+            180deg,
+            rgba(93, 2, 2, 0.497569) 0%,
+            rgba(93, 2, 2, 0.0001) 100%
+          );
+        }
+
+        img {
+          width: 202px;
+          height: 202px;
+          position: relative;
+          z-index: 2;
+        }
+        &-text {
+          width: 100%;
+          height: 162px;
+          @include flex(flex, column, flex-start, center);
+          text-align: center;
+
+          @include responsive {
+            width: 439px;
+            height: 120px;
+            @include flex(flex, column, flex-start, flex-start);
+            text-align: left;
+          }
+          @include mobile {
+            width: 100%;
+            height: 162px;
+            @include flex(flex, column, flex-start, center);
+            text-align: center;
+          }
+
+          h3 {
+            margin-top: 69px;
+            margin-bottom: 32px;
+
+            @include responsive {
+              margin-top: 0px;
+              margin-bottom: 16px;
+            }
+            @include mobile {
+              margin-top: 0px;
+              margin-bottom: 32px;
+            }
+          }
+          p {
+            // font-size: 20px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}

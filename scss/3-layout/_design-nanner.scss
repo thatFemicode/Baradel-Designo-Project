@@ -1,0 +1,388 @@
+#main {
+  .design-banner {
+    background-color: map-get($map: $color, $key: 'peach');
+    width: 100%;
+    height: 252px;
+    @include flex(flex, row, center, center);
+    border-radius: 15px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include mobile {
+      height: 320px;
+      border-radius: unset;
+      overflow: visible;
+    }
+    &-text {
+      width: 391px;
+      height: 124px;
+      @include flex(flex, column, space-between, center);
+      text-align: center;
+      position: relative;
+      z-index: 20;
+
+      @include mobile {
+        width: 327px;
+        height: 110px;
+      }
+
+      p {
+        font-weight: 400;
+      }
+    }
+    .web-banner-circle-one {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      right: 584px;
+      top: -164px;
+
+      @include responsive {
+        right: 420px;
+        top: -164px;
+      }
+    }
+    .web-banner-circle-two {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      right: 292px;
+      top: -164px;
+
+      @include responsive {
+        right: 124px;
+        top: -164px;
+      }
+    }
+    .web-banner-circle-three {
+      background: linear-gradient(
+        180deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      right: 0px;
+      top: -164px;
+
+      @include responsive {
+        right: -164px;
+        top: -164px;
+      }
+    }
+    .web-banner-circle-four {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      right: 0px;
+      bottom: -168px;
+
+      @include responsive {
+        right: -164px;
+        top: -168px;
+      }
+    }
+    .web-banner-circle-five {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      right: 292px;
+      bottom: -168px;
+
+      @include responsive {
+        right: 124px;
+        top: -168px;
+      }
+    }
+    .app-banner-circle-one {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: 292px;
+      top: -168px;
+
+      @include responsive {
+        background: linear-gradient(
+          0deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: -21px;
+      }
+      &.mobile-banner-circle-one {
+        @include mobile {
+          background: linear-gradient(
+            0deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 584px;
+          left: unset;
+          top: 0px;
+        }
+      }
+      &.mobile-banner-circle-one {
+        @include mobile {
+          background: linear-gradient(
+            0deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 584px;
+          left: unset;
+          top: 0px;
+        }
+      }
+      &.mobile-banner-circle-one {
+        @include mobile {
+          background: linear-gradient(
+            0deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 584px;
+          left: unset;
+          top: 0px;
+        }
+      }
+      &.mobile-banner-circle-one {
+        @include mobile {
+          background: linear-gradient(
+            0deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 584px;
+          left: unset;
+          top: 0px;
+        }
+      }
+    }
+    .app-banner-circle-two {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: 526px;
+      top: -164px;
+      @include responsive {
+        background: linear-gradient(
+          -90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 271px;
+      }
+      &.mobile-banner-circle-two {
+        @include mobile {
+          background: linear-gradient(
+            0deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 292px;
+          left: unset;
+          top: 0px;
+        }
+      }
+    }
+    .app-banner-circle-three {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      right: 293px;
+      bottom: -164px;
+      @include responsive {
+        background: linear-gradient(
+          -130deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 563px;
+        right: unset;
+        top: -164px;
+      }
+      &.mobile-banner-circle-three {
+        @include mobile {
+          background: linear-gradient(
+            180deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 0px;
+          left: unset;
+          top: 0px;
+        }
+      }
+    }
+    .app-banner-circle-four {
+      background: linear-gradient(
+        180deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: 234px;
+      bottom: -168px;
+
+      @include responsive {
+        background: linear-gradient(
+          -180deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 563px;
+      }
+      &.mobile-banner-circle-four {
+        @include mobile {
+          background: linear-gradient(
+            180deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 0px;
+          left: unset;
+          top: 292px;
+          bottom: unset;
+        }
+      }
+    }
+    .app-banner-circle-five {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: -58px;
+      bottom: -168px;
+
+      @include responsive {
+        background: linear-gradient(
+          -90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 271px;
+      }
+      &.mobile-banner-circle-five {
+        @include mobile {
+          background: linear-gradient(
+            90deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          right: 292px;
+          left: unset;
+          top: 292px;
+          bottom: unset;
+        }
+      }
+    }
+    .graphic-banner-circle-one {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      display: none;
+
+      @include responsive {
+        background: linear-gradient(
+          0deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        display: block;
+        left: -21px;
+        top: -164px;
+      }
+    }
+    .graphic-banner-circle-two {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: 526px;
+      top: -164px;
+
+      @include responsive {
+        background: linear-gradient(
+          -90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        display: block;
+        left: 271px;
+        top: -164px;
+      }
+    }
+    .graphic-banner-circle-three {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: -42px;
+      top: -168px;
+
+      @include responsive {
+        background: linear-gradient(
+          0deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 563px;
+        top: -164px;
+      }
+    }
+    .graphic-banner-circle-four {
+      background: linear-gradient(
+        -90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: 234px;
+      bottom: -168px;
+
+      @include responsive {
+        background: linear-gradient(
+          180deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 563px;
+        top: -168px;
+      }
+    }
+    .graphic-banner-circle-five {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      left: -58px;
+      bottom: -168px;
+
+      @include responsive {
+        background: linear-gradient(
+          -90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(93, 2, 2, 0.497569) 100%
+        );
+        left: 271px;
+        top: -168px;
+      }
+    }
+  }
+}

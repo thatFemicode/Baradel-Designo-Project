@@ -1,0 +1,41 @@
+// #footer{
+
+// .footer-details-
+.social-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background-repeat: no-repeat;
+  transition: 0.16s ease-in-out;
+  cursor: pointer;
+}
+.social-icon-facebook {
+  background-image: url(/dist/assets/shared/desktop/icon-facebook.svg);
+  &:hover {
+    background-image: url(/dist/assets/shared/desktop/icon-facebook-color.svg);
+  }
+}
+.social-icon-twitter {
+  background-image: url(/dist/assets/shared/desktop/icon-twitter.svg);
+  &:hover {
+    background-image: url(/dist/assets/shared/desktop/icon-twitter-color.svg);
+  }
+}
+.social-icon-youtube {
+  background-image: url(/dist/assets/shared/desktop/icon-youtube.svg);
+  &:hover {
+    background-image: url(/dist/assets/shared/desktop/icon-youtube-color.svg);
+  }
+}
+.social-icon-pinterest {
+  background-image: url(/dist/assets/shared/desktop/icon-pinterest.svg);
+  &:hover {
+    background-image: url(/dist/assets/shared/desktop/icon-pinterest-color.svg);
+  }
+}
+.social-icon-insta {
+  background-image: url(/dist/assets/shared/desktop/icon-instagram.svg);
+  &:hover {
+    background-image: url(/dist/assets/shared/desktop/icon-instagram-color.svg);
+  }
+}

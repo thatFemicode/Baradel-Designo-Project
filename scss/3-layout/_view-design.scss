@@ -1,0 +1,149 @@
+#main {
+  .view-design {
+    width: 100%;
+    height: 308px;
+    @include flex(flex, row, space-between, center);
+    margin-top: 160px;
+
+    @include responsive {
+      height: 424px;
+      @include flex(flex, column, space-between, center);
+      margin-top: 120px;
+    }
+
+    @include mobile {
+      width: 327px;
+      height: 524px;
+      margin-top: 96px;
+    }
+    &-home {
+      height: 640px;
+
+      @include responsive {
+        height: 649px;
+      }
+
+      @include mobile {
+        height: 798px;
+      }
+    }
+    .view-design-right {
+      @include flex(flex, column, space-between, center);
+      width: 541px;
+      height: 640px;
+
+      @include responsive {
+        @include flex(flex, column, space-between, center);
+        width: 689px;
+        height: 425px;
+      }
+      @include mobile {
+        @include flex(flex, column, space-between, center);
+        width: 327px;
+        height: 524px;
+      }
+    }
+    .design {
+      width: 541px;
+      height: 308px;
+      border-radius: 15px;
+      @include flex(flex, row, center, center);
+      @extend %back-image;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+
+      @include responsive {
+        width: 689px;
+        height: 200px;
+      }
+      @include mobile {
+        width: 327px;
+        height: 250px;
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        @include absolute-el(0px, unset, unset, unset);
+        transition: 0.2s ease-in-out;
+      }
+      &:hover::before {
+        background: rgba(231, 129, 107, 0.7);
+        transition: 0.2s ease-in-out;
+      }
+      &.big-design {
+        width: 541px;
+        height: 640px;
+
+        @include responsive {
+          width: 689px;
+          height: 200px;
+        }
+        @include mobile {
+          width: 327px;
+          height: 250px;
+        }
+      }
+      &.app-design {
+        background: url(/dist/assets/home/desktop/image-app-design.jpg);
+
+        @include responsive {
+          background: url(/dist/assets/home/tablet/image-app-design.jpg);
+        }
+        @include mobile {
+          background: url(/dist/assets/home/mobile/image-app-design.jpg);
+        }
+      }
+      &.graphic-design {
+        background: url(/dist/assets/home/desktop/image-graphic-design.jpg);
+
+        @include responsive {
+          background: url(/dist/assets/home/tablet/image-graphic-design.jpg);
+        }
+        @include mobile {
+          background: url(/dist/assets/home/mobile/image-graphic-design.jpg);
+        }
+      }
+      &.large-web-design {
+        background: url(/dist/assets/home/desktop/image-web-design-large.jpg);
+
+        @include responsive {
+          background: url(/dist/assets/home/tablet/image-web-design.jpg);
+        }
+
+        @include mobile {
+          background: url(/dist/assets/home/mobile/image-web-design.jpg);
+        }
+      }
+      &-wrap-text {
+        width: 364px;
+        height: 94px;
+        @include flex(flex, column, space-between, center);
+        position: relative;
+        pointer-events: none;
+
+        @include mobile {
+          width: 260px;
+          height: 70px;
+        }
+        h4 {
+          width: 197px;
+          height: 22px;
+          position: relative;
+
+          &::after {
+            content: '';
+            @include absolute-el(unset, 0px, 6px, unset);
+            width: 6px;
+            height: 10px;
+            background-image: url(/dist/assets/shared/desktop/icon-right-arrow.svg);
+            @extend %back-image;
+          }
+        }
+      }
+    }
+  }
+}

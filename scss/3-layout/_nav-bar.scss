@@ -1,0 +1,206 @@
+#header {
+  width: 100%;
+  height: 155px;
+  @include flex(flex, row, center, center);
+  position: relative;
+  background: #fff;
+  z-index: 3;
+
+  @include mobile {
+    height: 96px;
+  }
+
+  nav {
+    width: 1110px;
+    height: 24px;
+    @include flex(flex, row, space-between, center);
+    position: relative;
+
+    @include responsive {
+      width: 647px;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 27px;
+      @include flex(flex, row, space-between, center);
+    }
+
+    a {
+      width: 196px;
+      height: 24px;
+      position: relative;
+      z-index: 11;
+
+      @include mobile {
+        height: 27px;
+        margin-left: 24px;
+      }
+      img {
+        width: 196px;
+        height: 24px;
+        position: relative;
+        z-index: 11;
+      }
+    }
+    .nav-list {
+      width: 368px;
+      height: 14px;
+      @include flex(flex, row, space-between, center);
+      .nav-item {
+        .nav-links {
+          @include mobile {
+            display: none;
+          }
+          &.white::after {
+            background: #fff;
+          }
+          position: relative;
+          &::after {
+            content: '';
+            display: block;
+            @include absolute-el(unset, unset, 0px, unset);
+            width: 100%;
+            height: 1px;
+            background: map-get($map: $color, $key: 'black');
+            transition: transform 0.2s ease-in-out;
+            transform: scale(0);
+          }
+          &:hover::after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    .menu-btn {
+      display: none;
+
+      &.open {
+        .menu-btnburg {
+          @include mobile {
+            transform: translateX(50px);
+            background: transparent;
+            box-shadow: none;
+          }
+
+          &::after {
+            @include mobile {
+              transform: rotate(45deg) translate(-35px, 35px);
+            }
+          }
+          &::before {
+            @include mobile {
+              transform: rotate(-45deg) translate(-35px, -35px);
+            }
+          }
+        }
+      }
+      @include mobile {
+        position: relative;
+        z-index: 11;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        margin-right: 24px;
+        // background: red;
+      }
+      .menu-btnburg {
+        @include mobile {
+          width: 20px;
+          height: 2px;
+          background: #000;
+          transition: all 0.5s ease-in-out;
+        }
+        &::after {
+          @include mobile {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: map-get($map: $color, $key: 'black');
+            transition: all 0.5s ease-in-out;
+            transform: translateY(7px);
+          }
+        }
+        &::before {
+          @include mobile {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: map-get($map: $color, $key: 'black');
+            transition: all 0.5s ease-in-out;
+            transform: translateY(-7px);
+          }
+        }
+      }
+    }
+    .mobile-nav {
+      display: none;
+      @include mobile {
+        width: 100%;
+        height: 93vh;
+        position: absolute;
+        z-index: -8;
+        top: 61px;
+        display: block;
+        transition: 0.3s ease-in-out;
+        pointer-events: none;
+      }
+      &.active {
+        @include mobile {
+          z-index: 1;
+          background: rgba(0, 0, 0, 0.5);
+          pointer-events: all;
+        }
+      }
+
+      &-list {
+        @include mobile {
+          background-color: map-get($map: $color, $key: 'black');
+          height: 235px;
+          @include flex(flex, column, space-evenly, flex-start);
+          transition: 0.3s ease-in-out;
+          transform: translateY(-235px);
+          position: relative;
+          z-index: -8;
+          transition: 0.3s ease-in-out;
+        }
+        &.active {
+          @include mobile {
+            transform: translateY(0px);
+            transition: 0.3s ease-in-out;
+          }
+        }
+
+        .mobile-nav-links {
+          @include mobile {
+            margin-left: 24px;
+          }
+          &.black {
+            @include mobile {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .mobile-white-background {
+      display: none;
+
+      @include mobile {
+        display: block;
+        position: absolute;
+        top: -35px;
+        width: 100%;
+        height: 96px;
+        background-color: #fff;
+        z-index: 10;
+      }
+    }
+  }
+}

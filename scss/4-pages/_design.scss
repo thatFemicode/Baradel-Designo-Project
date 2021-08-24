@@ -1,0 +1,12 @@
+#main {
+  .design-leaf::before {
+    @include min {
+      content: '';
+      @include absolute-el(126px, unset, unset, -164px);
+      width: 1006px;
+      height: 594px;
+      background: url(/dist/assets/shared/desktop/bg-pattern-leaf.svg);
+      z-index: -2;
+    }
+  }
+}

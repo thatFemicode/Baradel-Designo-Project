@@ -1,0 +1,14 @@
+.main-container {
+  width: 1110px;
+  @include flex(flex, column, column, center);
+  margin: 0px auto;
+  position: relative;
+  z-index: 2;
+
+  @include responsive {
+    width: 698px;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}

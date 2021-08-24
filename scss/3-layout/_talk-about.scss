@@ -1,0 +1,142 @@
+#main {
+  .talk-about {
+    width: 100%;
+    height: 292px;
+    @include absolute-el(unset, unset, -146px, unset);
+    background-color: map-get($map: $color, $key: peach);
+    @include flex(flex, row, space-between, center);
+    padding: 0px 115px 0px 95px;
+    overflow: hidden;
+    position: relative;
+    z-index: 19;
+    border-radius: 15px;
+
+    @include responsive {
+      height: 350px;
+      @include flex(flex, column, space-between, center);
+      padding: 57px;
+      text-align: center;
+      @include absolute-el(unset, unset, -417px, unset);
+    }
+
+    @include mobile {
+      height: 379px;
+      width: 327px;
+      padding: 64px 24px;
+      @include absolute-el(unset, unset, -417px, unset);
+    }
+
+    &-text {
+      width: 459px;
+      height: 148px;
+      @include flex(flex, column, space-between, flex-start);
+      position: relative;
+      z-index: 20;
+
+      @include responsive {
+        width: 448px;
+        height: 148px;
+        @include flex(flex, column, space-between, center);
+      }
+      @include mobile {
+        width: 279px;
+        height: 163px;
+      }
+
+      h1 {
+        @include responsive {
+          width: 335px;
+        }
+
+        @include mobile {
+          width: 279px;
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        font-weight: 400;
+      }
+      a {
+        position: relative;
+        z-index: 20;
+      }
+    }
+    &-circle-one {
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      top: -146px;
+      right: 292px;
+
+      @include responsive {
+        right: 126px;
+      }
+      @include mobile {
+        right: 126px;
+      }
+    }
+    &-circle-two {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      top: -146px;
+      right: 0px;
+
+      @include responsive {
+        right: -166px;
+      }
+      @include mobile {
+        right: -166px;
+      }
+    }
+    &-circle-three {
+      background: linear-gradient(
+        0deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      bottom: -146px;
+      right: 0px;
+      @include responsive {
+        right: -166px;
+      }
+      @include mobile {
+        right: -166px;
+      }
+    }
+    &-circle-four {
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      bottom: -146px;
+      right: 292px;
+      @include responsive {
+        right: 126px;
+      }
+      @include mobile {
+        right: 126px;
+      }
+    }
+    &-circle-five {
+      background: linear-gradient(
+        180deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      bottom: -146px;
+      right: 584px;
+      @include responsive {
+        right: 418px;
+      }
+      @include mobile {
+        right: 418px;
+      }
+    }
+  }
+}

@@ -1,0 +1,451 @@
+#main {
+  .about-leaf {
+    &::after {
+      @include min {
+        content: '';
+        @include absolute-el(1625px, -553px, unset, unset);
+        width: 1006px;
+        height: 594px;
+        background: url(/dist/assets/shared/desktop/bg-pattern-leaf.svg);
+        z-index: -2;
+        transform: rotate(180deg);
+        overflow: hidden;
+      }
+    }
+  }
+  .hero-about {
+    width: 100%;
+    height: 480px;
+    @include flex(flex, row, flex-start, center);
+
+    @include responsive {
+      height: 632px;
+      @include flex(flex, column-reverse, flex-start, center);
+    }
+    @include mobile {
+      width: 100%;
+      max-width: 100%;
+      height: 715px;
+      padding: 0 30px;
+    }
+    &-text {
+      background-color: map-get($map: $color, $key: peach);
+      width: 635px;
+      height: 480px;
+      @include flex(flex, row, flex-start, center);
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      position: relative;
+      overflow: hidden;
+
+      @include responsive {
+        width: 100%;
+        height: 312px;
+        @include flex(flex, row, center, center);
+        border-top-left-radius: unset;
+        border-bottom-right-radius: 15px;
+      }
+      @include mobile {
+        background-color: map-get($map: $color, $key: peach);
+        height: 395px;
+        border-top-left-radius: unset;
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
+      }
+      &-wrap {
+        // display: none;
+        width: 424px;
+        height: 236px;
+        @include flex(flex, column, space-between, flex-start);
+        margin-left: 95px;
+        position: relative;
+        z-index: 1;
+        // background: red;
+
+        @include responsive {
+          width: 573px;
+          height: 184px;
+          @include flex(flex, column, space-between, center);
+          text-align: center;
+          margin-left: 0px;
+        }
+        @include mobile {
+          width: 327px;
+          height: 235px;
+          @include flex(flex, column, space-between, center);
+        }
+        p {
+          font-weight: 400;
+          line-height: 1.6;
+          font-size: 1rem;
+
+          @include responsive {
+            font-size: 1.05rem;
+          }
+        }
+      }
+      &::after {
+        content: '';
+        background: url(/dist/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+        width: 640px;
+        height: 640px;
+        @include absolute-el(unset, unset, 0px, unset);
+        z-index: 0;
+
+        @include responsive {
+          content: '';
+          background: url(/dist/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+          width: 640px;
+          height: 640px;
+          @include absolute-el(unset, unset, 93px, -137px);
+          z-index: 0;
+        }
+        @include mobile {
+          content: '';
+          background: rgba(93, 2, 2, 0.497569);
+          opacity: 0.3;
+          border-radius: 50%;
+          width: 292px;
+          height: 292px;
+          @include absolute-el(-138px, 0px, unset, unset);
+        }
+      }
+    }
+    &-image {
+      width: 473px;
+      height: 480px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-image: url(/dist/assets/about/desktop/image-about-hero.jpg);
+
+      @include responsive {
+        height: 320px;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: unset;
+        background-image: url(/dist/assets/about/tablet/image-about-hero.jpg);
+      }
+      @include mobile {
+        width: 100%;
+        height: 320px;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+        background-image: url(/dist/assets/about/mobile/image-about-hero.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .about-talent {
+    width: 100%;
+    height: 640px;
+    margin-top: 160px;
+    border-radius: 15px;
+
+    @include responsive {
+      height: 736px;
+      margin-top: 120px;
+    }
+    @include mobile {
+      height: 865px;
+      margin-top: 0;
+    }
+
+    &.about-world-talent {
+      @include flex(flex, row, space-between, center);
+
+      @include responsive {
+        @include flex(flex, column, space-between, center);
+      }
+
+      @include mobile {
+        @include flex(flex, column, space-between, center);
+        margin-top: 120px;
+      }
+    }
+    &.about-real-talent {
+      @include flex(flex, row-reverse, space-between, center);
+
+      @include responsive {
+        @include flex(flex, column, space-between, center);
+      }
+      @include mobile {
+        @include flex(flex, column, space-between, center);
+        margin-top: 120px;
+      }
+
+      .about-real-talent-image {
+        background-image: url(/dist/assets/about/desktop/image-real-deal.jpg);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        @include responsive {
+          background-image: url(/dist/assets/about/tablet/image-real-deal.jpg);
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: unset;
+        }
+        @include mobile {
+          background-image: url(/dist/assets/about/mobile/image-real-deal.jpg);
+          border-top-right-radius: 0px;
+          border-top-left-radius: 0px;
+        }
+      }
+      .about-real-talent-text {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+        @include responsive {
+          border-top-right-radius: unset;
+          border-top-left-radius: unset;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+        }
+
+        @include mobile {
+          border-bottom-left-radius: unset;
+          border-bottom-right-radius: unset;
+        }
+      }
+      .about-real-talent-circle-one {
+        background: linear-gradient(
+          90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(141, 123, 123, 0.498) 100%
+        );
+        @include absolute-el(unset, unset, 0px, 0px);
+        // bottom: 292px;
+        // left: -146px;
+        @include responsive {
+          background: linear-gradient(
+            -90deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(141, 123, 123, 0.498) 100%
+          );
+          @include absolute-el(unset, unset, 336px, 94px);
+        }
+        @include mobile {
+          left: 0px;
+          bottom: 292px;
+        }
+      }
+      .about-real-talent-circle-two {
+        background: linear-gradient(
+          180deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(160, 107, 107, 0.497569) 100%
+        );
+        @include absolute-el(unset, unset, 0px, 292px);
+        // bottom: 292px;
+        // left: -146px;
+        @include responsive {
+          background: linear-gradient(
+            90deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(93, 2, 2, 0.497569) 100%
+          );
+          left: 94px;
+          bottom: 44px;
+        }
+        @include mobile {
+          left: 0px;
+          bottom: 0px;
+        }
+      }
+      .about-real-talent-circle-three {
+        display: none;
+        // background: linear-gradient(
+        //   180deg,
+        //   rgba(93, 2, 2, 0.0001) 0%,
+        //   rgba(160, 107, 107, 0.497569) 100%
+        // );
+        // @include absolute-el(unset, unset, 0, 292px);
+        // bottom: 292px;
+        // left: -146px;
+        @include responsive {
+          display: block;
+          background: linear-gradient(
+            180deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(160, 107, 107, 0.497569) 100%
+          );
+          @include absolute-el(unset, unset, 44px, 386px);
+        }
+        @include mobile {
+          left: 292px;
+          bottom: 0px;
+        }
+      }
+    }
+
+    .about-talent-image {
+      width: 476px;
+      height: 640px;
+      @extend %back-image;
+
+      @include responsive {
+        width: 100%;
+        height: 320px;
+      }
+      @include mobile {
+        width: 100%;
+        height: 320px;
+      }
+
+      &.about-world-talent-image {
+        background-image: url(/dist/assets/about/desktop/image-world-class-talent.jpg);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+        @include responsive {
+          background-image: url(/dist/assets/about/tablet/image-world-class-talent.jpg);
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: unset;
+        }
+        @include mobile {
+          background-image: url(/dist/assets/about/mobile/image-world-class-talent.jpg);
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+        }
+      }
+    }
+    .about-talent-text {
+      width: 634px;
+      height: 640px;
+      background-color: rgba(253, 243, 240, 1);
+      @include flex(flex, row, center, center);
+      overflow: hidden;
+      position: relative;
+
+      @include responsive {
+        width: 100%;
+        height: 416px;
+      }
+      @include mobile {
+        width: 100%;
+        height: 545px;
+      }
+
+      &.about-world-talent-text {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        @include responsive {
+          border-top-right-radius: unset;
+          border-top-left-radius: unset;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+        }
+        @include mobile {
+          border-bottom-left-radius: unset;
+          border-bottom-right-radius: unset;
+        }
+      }
+
+      &-wrap {
+        width: 445px;
+        height: 332px;
+        @include flex(flex, column, space-between, flex-start);
+        position: relative;
+        z-index: 2;
+
+        @include responsive {
+          width: 572px;
+          height: 280px;
+          @include flex(flex, column, space-between, center);
+          text-align: center;
+        }
+
+        @include mobile {
+          width: 84.5%;
+          height: 385px;
+        }
+
+        p {
+          font-weight: 400;
+          line-height: 1.6;
+        }
+      }
+    }
+    .circle-about-talent {
+      opacity: 0.5;
+      z-index: 1;
+
+      &.about-world-talent-circle-one {
+        background: linear-gradient(
+          -90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(160, 107, 107, 0.497569) 100%
+        );
+        @include absolute-el(unset, unset, 292px, -146px);
+        // bottom: 292px;
+        // left: -146px;
+
+        @include responsive {
+          background: linear-gradient(
+            -90deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(160, 107, 107, 0.497569) 100%
+          );
+          @include absolute-el(unset, unset, 336px, 94px);
+        }
+        @include mobile {
+          left: 0px;
+          bottom: 292px;
+        }
+      }
+      &.about-world-talent-circle-two {
+        background: linear-gradient(
+          90deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(160, 107, 107, 0.497569) 100%
+        );
+        @include absolute-el(unset, unset, 0px, -146px);
+        // bottom: 292px;
+        // left: -146px;
+
+        @include responsive {
+          background: linear-gradient(
+            90deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(160, 107, 107, 0.497569) 100%
+          );
+          @include absolute-el(unset, unset, 44px, 94px);
+          // bottom: 292px;
+          // left: -146px;
+        }
+        @include mobile {
+          left: 0px;
+          bottom: 0px;
+        }
+      }
+      &.about-world-talent-circle-three {
+        background: linear-gradient(
+          180deg,
+          rgba(93, 2, 2, 0.0001) 0%,
+          rgba(160, 107, 107, 0.497569) 100%
+        );
+        @include absolute-el(unset, unset, 0, 146px);
+        // bottom: 292px;
+        // left: -146px;
+
+        @include responsive {
+          background: linear-gradient(
+            180deg,
+            rgba(93, 2, 2, 0.0001) 0%,
+            rgba(160, 107, 107, 0.497569) 100%
+          );
+          @include absolute-el(unset, unset, 44px, 386px);
+          // bottom: 292px;
+          // left: -146px;
+        }
+        @include mobile {
+          left: 292px;
+          bottom: 0px;
+        }
+      }
+    }
+  }
+}

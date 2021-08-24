@@ -1,0 +1,32 @@
+.button {
+  width: 152px;
+  height: 56px;
+  @extend %flex-center-center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in-out;
+}
+.light-button {
+  background-color: map-get($map: $color, $key: 'white');
+  color: map-get($map: $color, $key: 'black');
+
+  &:hover {
+    color: map-get($map: $color, $key: 'white');
+    background-color: map-get($map: $color, $key: 'light-peach');
+    transition: 0.2s ease-in-out;
+  }
+}
+.dark-button {
+  background-color: map-get($map: $color, $key: 'peach');
+  color: map-get($map: $color, $key: 'white');
+
+  &:hover {
+    color: map-get($map: $color, $key: 'white');
+    background-color: map-get($map: $color, $key: 'light-peach');
+    transition: 0.2s ease-in-out;
+  }
+}

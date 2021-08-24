@@ -1,0 +1,26 @@
+// Helpers
+@import './1-helpers/variables';
+@import './1-helpers/base';
+@import './1-helpers/mixin';
+@import './1-helpers/placeholder';
+// Basics
+@import './2-basics/button';
+@import './2-basics/circle';
+@import './2-basics/socials';
+@import './2-basics/typography';
+// Layout
+@import './3-layout/nav-bar';
+@import './3-layout/main-contaoner';
+@import './3-layout/design-nanner';
+@import './3-layout/design-cards';
+@import './3-layout/view-design';
+@import './3-layout/see-location';
+@import './3-layout/talk-about';
+@import './3-layout/footer';
+// Pages
+@import './4-pages/index';
+@import './4-pages/about';
+
+@import './4-pages/design';
+@import './4-pages/location';
+@import './4-pages/contact';
